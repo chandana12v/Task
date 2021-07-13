@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Nunito Sans", sans-serif;
+  background-color: #f7f7f7;
+}
+.container{
+    padding:30px 15px;
+    max-width: 1440px !important;
+    margin: auto;
+}
+.box{
+    height:170px;
+    background:#fff;
+    padding:15px;
+    border-top:5px solid rgb(32,218,88);
+    border-radius: 5px 5px 8px 8px;
+}
+.tickets{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom:30px;
+}
+.two{
+    font-size: 30px;
+    font-weight: 700;
+}
+.sec-col{
+    background-color: #fff;
+    padding:12px;
+    border-radius: 5px 5px 8px 8px;
+}
+.bdr-blue{
+    border-top: 5px solid skyblue;
+    margin-bottom: 10px;
+}
+.bdr-red{
+    border-top: 5px solid red;
+}
+.bdr-org{
+    border-top: 5px solid orange;
+    margin-bottom: 10px;
+}
+.bdr-orgd{
+    border-top: 5px solid orangered;
+    margin-bottom: 10px;
+}
+.bdr-grn{
+    border-top: 5px solid rgb(218, 215, 32);
+}
+.bdr-lgtgrn{
+    border-top: 5px solid rgb(32,218,88);
+}
+.txt{
+    font-size: 16px;
+    font-weight: 700;
+}
+.numtxt{
+    font-size: 20px;
+    font-weight: 700;
+}
+.section-1{
+    margin-bottom: 30px;
+}
+.form-section{
+    background-color: #fff;
+    padding:12px 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.form-section .form-group{
+    margin-bottom: 0px;
+}
+@media (max-width:576px){
+    .box,
+    .sec-col,
+    .form-section .form-group,
+     .srch-btn{
+        margin-bottom: 10px;
+    }
+   
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="tableStyle.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="section-1">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class='box'>
+                        <div class='tickets'>
+                            Total Tickets
+                        </div>
+                        <div class='d-flex justify-content-between align-items-center'>
+                            <div class='two'>2</div>
+                            <div><img src="./images/share_black_24dp.svg"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div>
+                        <div class='sec-col bdr-blue'>
+                            <div class='txt'>
+                                New
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center'>
+                                <div class='numtxt'>1</div>
+                                <div> <img src="./images/star.svg" alt=""> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class='sec-col bdr-red'>
+                            <div class='txt'>
+                                Escalated
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center'>
+                                <div class='numtxt'>0</div>
+                                <div> <img src="./images/report_black_24dp.svg" alt=""> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div>
+                        <div class='sec-col bdr-org'>
+                            <div class='txt'>
+                                WIP
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center'>
+                                <div class='numtxt'>0</div>
+                                <div> <img src="./images/autorenew_black_24dp.svg" alt=""> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class='sec-col bdr-grn'>
+                            <div class='txt'>
+                                Resolved
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center'>
+                                <div class='numtxt'>1</div>
+                                <div> <img src="./images/check_black_24dp.svg" alt=""> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div>
+                        <div class='sec-col bdr-orgd'>
+                            <div class='txt'>
+                                PWC
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center'>
+                                <div class='numtxt'>0</div>
+                                <div> <img src="./images/person_add_alt_black_24dp.svg" alt=""> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class='sec-col bdr-lgtgrn'>
+                            <div class='txt'>
+                                Closed
+                            </div>
+                            <div class='d-flex justify-content-between align-items-center'>
+                                <div class='numtxt'>0</div>
+                                <div> <img src="./images/check_black_24dp.svg" alt=""> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-section">
+            <form>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="input-group date" id="frmdate" data-date-format="dd-mm-yyyy">
+                                <label for="">FROM:</label>
+                                <input type="text" class='expirydate form-control' placeholder="From Date">
+                                <span class="input-group-addon"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="input-group date" id="todate" data-date-format="dd-mm-yyyy">
+                                <label for=""> TO:</label>
+                                <input type="text" class='expirydate form-control' placeholder="To Date">
+                                <span class="input-group-addon"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <button class='btn btn-primary srch-btn'>SEARCH</button>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group select-warehouse">
+                            <select class="form-control required" id='select-wh' required>
+                                <option value="" selected>
+                                    --Select--
+                                </option>
+                                <option value="hyderabad">Hyderabad
+                                </option>
+                                <option value="mumbai">Mumbai
+                                </option>
+                                <option value="delhi">Delhi</option>
+                                <option value="pune">Pune</option>
+                                <option value="madras">Madras
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="table-section">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group has-search">
+                        <img src="images/searchline.svg"
+                            class="form-control-feedback">
+                        <input type="text" class=" text-center form-control search-bar"
+                            placeholder="Search in entries..." />
+                    </div>
+                </div>
+                <div class="col-6 text-right">
+                        <img src="./images/file_download_black_24dp.svg" alt="">
+                </div>
+                
+                
+            </div>
+            
+            <div class="row">
+                <div class="col-12  pb-5">
+                    <div class="table-responsive" id="customerTable">
+                        <table class="table mb-0" id="respondTable">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
